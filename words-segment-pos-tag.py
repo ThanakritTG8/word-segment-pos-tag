@@ -71,7 +71,9 @@ def merge_files_result(files_name):
             writer.writerow({files_name[0]:results[0][i],\
                 files_name[1]:results[1][i],files_name[2]:results[2][i],\
                 files_name[3]:results[3][i],files_name[4]:results[4][i],\
-                files_name[5]:results[5][i]})
+                files_name[5]:results[5][i],files_name[6]:results[6][i],\
+                files_name[7]:results[7][i],files_name[8]:results[8][i],\
+                files_name[9]:results[9][i]})
             i+=1
     print(f"Merge files to {path_file} Done!")
 
@@ -93,8 +95,8 @@ def tltk_segment_pythai_postag(file_name) :
 
 def main () :
     files_name= ["patong_google_positive","patong_google_negative","promthep_google_positive"\
-        ,"promthep_google_negative","wat_google"\
-        ,"patong_trip_positive","patong_trip_negative","promthep_trip","wat_trip_positive","wat_trip_positive"]
+        ,"promthep_google_negative","wat_google_positive","patong_trip_positive","patong_trip_negative"\
+        ,"promthep_trip_positive","wat_trip_positive","wat_trip_negative"]
     for file_name in files_name :
         tltk_segment_pythai_postag(file_name)
     merge_files_result(files_name)
