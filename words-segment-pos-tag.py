@@ -92,8 +92,9 @@ def tltk_segment_pythai_postag(file_name) :
     write_file_dict(file_name,word_postag_result)
 
 def main () :
-    files_name= ["patong_google","promthep_google","wat_google"\
-        ,"patong_trip","promthep_trip","wat_trip"]
+    files_name= ["patong_google_positive","patong_google_negative","promthep_google_positive"\
+        ,"promthep_google_negative","wat_google"\
+        ,"patong_trip_positive","patong_trip_negative","promthep_trip","wat_trip_positive","wat_trip_positive"]
     for file_name in files_name :
         tltk_segment_pythai_postag(file_name)
     merge_files_result(files_name)
